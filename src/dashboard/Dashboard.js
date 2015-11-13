@@ -119,8 +119,10 @@ define([
                     '</li>';
                 $('#topLevelMetricsList').append(string);
             }
-
+            //test comment
+            
             $.each(topLevelMetricsConfig, function( id, obj ) {
+                var xyz;
                 queryBody = obj.query;
                 queryBody.query.filtered.filter.bool.must[1].range.StartTime.gte= "now-2w";
                 queryBody.query.filtered.filter.bool.must[1].range.StartTime.lte= "now";
